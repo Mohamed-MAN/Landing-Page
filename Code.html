@@ -9,19 +9,63 @@
 </head>
 
 <body>
-    \begin{itemize}
-    \end{itemize}
+    <div class="container">
+        <h1>Current Time</h1>
+        <div id="clock"></div>
+        <div id="date"></div>
+        <div id="day"></div>
+    </div>
 
-    \begin{enumerate}
-    \end{enumerate}
+    <style>
+        .container {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+        #clock {
+            font-size: 48px;
+            margin: 20px;
+        }
+        #date, #day {
+            font-size: 24px;
+            margin: 10px;
+        }
+    </style>
 
-    \begin{description}
-    \end{description}
+    <script>
+        function updateTime() {
+            const now = new Date();
+            
+            // Format time
+            const time = now.toLocaleTimeString('en-US', {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit'
+            });
+            
+            // Format date
+            const date = now.toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+            
+            // Get day name
+            const day = now.toLocaleDateString('en-US', {
+                weekday: 'long'
+            });
+            
+            // Update the DOM
+            document.getElementById('clock').textContent = time;
+            document.getElementById('date').textContent = date;
+            document.getElementById('day').textContent = day;
+        }
 
-    \begin{center}
-    \begin{tabular}{|c|c|c|c|c|c|c}
-    \end{tabular}
-    \end{center}
+        // Update time immediately and then every second
+        updateTime();
+        setInterval(updateTime, 1000);
+    </script>
 </body>
+
 
 </html>
