@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game & Clock Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 2rem;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+        }
+
+        .card h2 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .card a {
+            display: inline-block;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            transition: transform 0.2s ease;
+        }
+
+        .card a:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+                max-width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Game & Clock Hub</h1>
+        <div class="cards-container">
+            <div class="card">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzZlOGVmYiI+PHBhdGggZD0iTTQgM0gyMEMyMS4xMDQ2IDMgMjIgMy44OTU0MyAyMiA1VjE5QzIyIDIwLjEwNDYgMjEuMTA0NiAyMSAyMCAyMUg0QzIuODk1NDMgMjEgMiAyMC4xMDQ2IDIgMTlWNUMyIDMuODk1NDMgMi44OTU0MyAzIDQgM1pNNCA1VjE5SDE0VjVINFpNMTYgNVYxOUgyMFY1SDE2Wk02IDdIMTJWOUg2VjdaTTYgMTFIMTJWMTNINlYxMVpNNiAxNUgxMlYxN0g2VjE1WiIvPjwvc3ZnPg==" alt="Monopoly Icon">
+                <h2>Monopoly Game</h2>
+                <p>Play the classic property trading game with a modern twist!</p>
+                <a href="index.html">Play Now</a>
+            </div>
+            <div class="card">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2E3NzdlMyI+PHBhdGggZD0iTTEyIDJDMTcuNTIyOCAyIDIyIDYuNDc3MTUgMjIgMTJDMjIgMTcuNTIyOCAxNy41MjI4IDIyIDEyIDIyQzYuNDc3MTUgMjIgMiAxNy41MjI4IDIgMTJDMiA2LjQ3NzE1IDYuNDc3MTUgMiAxMiAyWk0xMiA0QzcuNTgxNzIgNCA0IDcuNTgxNzIgNCAxMkM0IDE2LjQxODMgNy41ODE3MiAyMCAxMiAyMEMxNi40MTgzIDIwIDIwIDE2LjQxODMgMjAgMTJDMjAgNy41ODE3MiAxNi40MTgzIDQgMTIgNFpNMTMgMTEuNTg1OFYxMkg5VjEwSDEzVjYuNDE0MjFMMTUuNTg1OCA5TDEzIDExLjU4NThaIi8+PC9zdmc+" alt="Clock Icon">
+                <h2>Digital Clock</h2>
+                <p>Check the current time with our beautiful digital clock!</p>
+                <a href="Clock.html">View Clock</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
